@@ -106,7 +106,7 @@ p {
 .ios-status-icons {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   color: #151b27;
 }
 
@@ -134,48 +134,6 @@ p {
 
 .signal-bars i:nth-child(3) {
   height: 11px;
-}
-
-.wifi-icon {
-  position: relative;
-  width: 17px;
-  height: 13px;
-  overflow: hidden;
-  opacity: 0.9;
-}
-
-.wifi-icon,
-.wifi-icon::before,
-.wifi-icon::after {
-  border-color: currentColor;
-}
-
-.wifi-icon::before,
-.wifi-icon::after {
-  position: absolute;
-  left: 50%;
-  content: "";
-  border-style: solid;
-  border-width: 2px 2px 0 2px;
-  border-radius: 999px 999px 0 0;
-  transform: translateX(-50%);
-}
-
-.wifi-icon::before {
-  bottom: 1px;
-  width: 15px;
-  height: 11px;
-}
-
-.wifi-icon::after {
-  bottom: 1px;
-  width: 9px;
-  height: 7px;
-}
-
-.wifi-icon {
-  background:
-    radial-gradient(circle at 50% 100%, currentColor 0 1.7px, transparent 1.9px);
 }
 
 .battery-icon {
@@ -481,11 +439,11 @@ p {
 }
 
 .is-paused .arm-stick {
-  transform: rotate(-18deg);
+  transform: rotate(-28deg);
 }
 
 .is-paused .needle {
-  transform: rotate(5deg) translate(4px, 4px);
+  transform: rotate(-4deg) translate(-8px, -8px);
 }
 
 .arm-base {
@@ -513,7 +471,7 @@ p {
   top: 21px;
   right: 18px;
   width: 6px;
-  height: 156px;
+  height: 146px;
   border-radius: 999px;
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.34), transparent 45%),
@@ -523,21 +481,26 @@ p {
     5px 5px 14px rgba(67, 75, 94, 0.16);
   transform: rotate(-36deg);
   transform-origin: top center;
-  transition: transform 260ms ease;
+  transition:
+    height 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 1;
 }
 
 .needle {
   position: absolute;
-  right: 68px;
-  bottom: 42px;
+  right: 88px;
+  bottom: 38px;
   width: 34px;
   height: 18px;
   border-radius: 4px;
   background:
     linear-gradient(145deg, #2a3039, #11151c);
   transform: rotate(-12deg) translate(-20px, -28px);
-  transition: transform 260ms ease;
+  transition:
+    right 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    bottom 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .needle::after {
@@ -568,19 +531,25 @@ p {
 }
 
 .tonearm.tonearm-playing .arm-stick {
+  height: 146px;
   transform: rotate(-36deg);
 }
 
 .tonearm.tonearm-playing .needle {
+  right: 88px;
+  bottom: 38px;
   transform: rotate(-12deg) translate(-20px, -28px);
 }
 
 .tonearm.tonearm-paused .arm-stick {
-  transform: rotate(-18deg);
+  height: 132px;
+  transform: rotate(-28deg);
 }
 
 .tonearm.tonearm-paused .needle {
-  transform: rotate(5deg) translate(4px, 4px);
+  right: 84px;
+  bottom: 30px;
+  transform: rotate(-4deg) translate(-8px, -8px);
 }
 
 .loop-control {
@@ -971,7 +940,7 @@ p {
   gap: 9px;
   line-height: 1;
   margin-top: 18px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   padding: 0 28px;
   text-align: center;
 }
@@ -1248,7 +1217,7 @@ p {
 
   .return-player {
     margin-top: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     min-height: 60px;
   }
 

@@ -8,7 +8,6 @@ const initialElapsed = 18;
 const libraryTracks = [
   { title: 'Levitating', artist: 'Dua Lipa', tag: 'Playing', length: '3:23', duration: 203, bpm: 103 },
   { title: 'Houdini', artist: 'Dua Lipa', tag: 'Queued', length: '3:05', duration: 185, bpm: 117 },
-  { title: 'Training Season', artist: 'Dua Lipa', tag: 'Saved', length: '3:29', duration: 209, bpm: 123 },
   { title: 'Physical', artist: 'Dua Lipa', tag: 'In crate', length: '3:13', duration: 193, bpm: 147 },
 ];
 
@@ -132,7 +131,6 @@ function App() {
               <i />
               <i />
             </span>
-            <span className="wifi-icon" />
             <span className="battery-icon">
               <i />
             </span>
@@ -189,23 +187,8 @@ function App() {
                 </div>
                 <div className={`tonearm ${isPlaying ? 'tonearm-playing' : 'tonearm-paused'}`} aria-hidden="true">
                   <span className="arm-base" />
-                  <span
-                    className="arm-stick"
-                    style={{
-                      height: isPlaying ? '146px' : '132px',
-                      right: '18px',
-                      top: '21px',
-                      transform: isPlaying ? 'rotate(-36deg)' : 'rotate(-28deg)',
-                    }}
-                  />
-                  <span
-                    className="needle"
-                    style={{
-                      bottom: isPlaying ? '38px' : '30px',
-                      right: isPlaying ? '88px' : '84px',
-                      transform: isPlaying ? 'rotate(-12deg) translate(-20px, -28px)' : 'rotate(-4deg) translate(-8px, -8px)',
-                    }}
-                  />
+                  <span className="arm-stick" />
+                  <span className="needle" />
                 </div>
                 <button
                   className="loop-control"
