@@ -49,7 +49,7 @@ p {
   display: grid;
   min-height: 100vh;
   place-items: center;
-  padding: 18px;
+  padding: 8px;
   background:
     radial-gradient(circle at 18% 18%, rgba(121, 166, 255, 0.22), transparent 24%),
     radial-gradient(circle at 82% 24%, rgba(255, 138, 164, 0.2), transparent 25%),
@@ -61,7 +61,8 @@ p {
   position: relative;
   display: grid;
   width: min(390px, 100%);
-  min-height: 820px;
+  height: min(780px, calc(100vh - 16px));
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.88);
   border-radius: 34px;
@@ -76,14 +77,15 @@ p {
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(30px) saturate(1.32);
   grid-template-rows: auto auto auto auto 1fr auto;
-  padding: 18px 16px 22px;
+  padding: 16px 16px 18px;
 }
 
 .screen-stack {
   position: relative;
   z-index: 2;
   display: grid;
-  min-height: 775px;
+  min-height: 0;
+  height: 100%;
   grid-template-rows: auto auto auto auto 1fr auto;
 }
 
@@ -151,7 +153,7 @@ p {
   align-items: end;
   justify-content: space-between;
   gap: 18px;
-  margin: 20px 4px 12px;
+  margin: 14px 4px 10px;
 }
 
 .eyebrow {
@@ -200,7 +202,7 @@ p {
 .turntable-card {
   position: relative;
   display: grid;
-  height: 352px;
+  height: 318px;
   margin-top: 0;
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.58);
@@ -258,8 +260,8 @@ p {
 .vinyl-record {
   position: relative;
   display: grid;
-  width: 246px;
-  height: 246px;
+  width: 218px;
+  height: 218px;
   animation: record-spin 10s linear infinite;
   animation-play-state: running;
   place-items: center;
@@ -333,7 +335,7 @@ p {
 
 .tonearm {
   position: absolute;
-  top: 34px;
+  top: 28px;
   right: 70px;
   width: 104px;
   height: 226px;
@@ -500,7 +502,7 @@ p {
 .track-section {
   display: grid;
   justify-items: center;
-  margin-top: 24px;
+  margin-top: 16px;
   text-align: center;
 }
 
@@ -515,7 +517,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .meta-row span {
@@ -537,7 +539,7 @@ p {
   display: grid;
   align-content: center;
   justify-items: center;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .waveform {
@@ -590,7 +592,7 @@ p {
   align-items: center;
   grid-template-columns: 1fr auto 1fr;
   gap: 16px;
-  margin-top: 28px;
+  margin-top: 16px;
 }
 
 .transport-controls button {
@@ -1037,12 +1039,14 @@ p {
 
   .phone-player {
     width: 100%;
-    min-height: 100vh;
+    height: 100dvh;
+    min-height: 0;
     border-radius: 0;
   }
 
   .screen-stack {
-    min-height: calc(100vh - 44px);
+    min-height: 0;
+    height: 100%;
   }
 
   .hero-strip {
@@ -1054,12 +1058,12 @@ p {
   }
 
   .turntable-card {
-    height: 328px;
+    height: 302px;
   }
 
   .vinyl-record {
-    width: 226px;
-    height: 226px;
+    width: 208px;
+    height: 208px;
   }
 
   .tonearm {
@@ -1086,11 +1090,11 @@ p {
   }
 
   .track-section {
-    margin-top: 20px;
+    margin-top: 14px;
   }
 
   .transport-controls {
-    margin-top: 22px;
+    margin-top: 14px;
   }
 
   .library-hero h1 {
