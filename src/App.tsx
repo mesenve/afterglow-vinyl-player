@@ -8,7 +8,7 @@ const initialElapsed = 18;
 const libraryTracks = [
   { title: 'Levitating', artist: 'Dua Lipa', tag: 'Playing', length: '3:23', duration: 203, bpm: 103 },
   { title: 'Houdini', artist: 'Dua Lipa', tag: 'Queued', length: '3:05', duration: 185, bpm: 117 },
-  { title: 'Physical', artist: 'Dua Lipa', tag: 'In crate', length: '3:13', duration: 193, bpm: 147 },
+  { title: 'Physical', artist: 'Dua Lipa', tag: 'Queued', length: '3:13', duration: 193, bpm: 147 },
 ];
 
 function App() {
@@ -270,14 +270,14 @@ function App() {
                 >
                   <IconChevronLeft />
                 </button>
-                <span>Vault</span>
+                <span>Crate</span>
                 <button type="button" aria-label="More" onClick={openMore}>
                   <IconMore />
                 </button>
               </header>
 
               <section className="library-hero" aria-label="Music library">
-                <span className="eyebrow">Mood vault</span>
+                <span className="eyebrow">Soft crate</span>
                 <h1>Afterglow</h1>
                 <p>Saved cuts, queued favorites, and late-night repeats in one soft stack.</p>
               </section>

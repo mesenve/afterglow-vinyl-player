@@ -491,11 +491,12 @@ p {
   position: absolute;
   right: 88px;
   bottom: 38px;
-  width: 34px;
-  height: 18px;
-  border-radius: 4px;
+  width: 36px;
+  height: 13px;
+  border-radius: 999px 8px 8px 999px;
   background:
-    linear-gradient(145deg, #2a3039, #11151c);
+    linear-gradient(145deg, #232936, #121821);
+  box-shadow: 0 5px 10px rgba(7, 10, 15, 0.16);
   transform: rotate(-12deg) translate(-20px, -28px);
   transition:
     right 520ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -505,13 +506,16 @@ p {
 
 .needle::after {
   position: absolute;
-  right: -6px;
-  bottom: -4px;
-  width: 8px;
-  height: 8px;
+  right: -3px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
   content: "";
   border-radius: 50%;
-  background: #c63b47;
+  background:
+    linear-gradient(145deg, #df6475, #c64154);
+  box-shadow: 0 0 0 2px rgba(198, 65, 84, 0.1);
+  transform: translateY(-50%);
 }
 
 .is-playing .arm-stick {
