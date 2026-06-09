@@ -124,6 +124,21 @@ function App() {
         className={`phone-player ${view === 'library' ? 'is-library' : ''} ${isPlaying ? 'is-playing' : 'is-paused'} ${isLooping ? 'is-looping' : ''}`}
         aria-label="Mobile vinyl music player"
       >
+        <div className="ios-status-bar" aria-hidden="true">
+          <span>9:41</span>
+          <div className="ios-status-icons">
+            <span className="signal-bars">
+              <i />
+              <i />
+              <i />
+            </span>
+            <span className="wifi-icon" />
+            <span className="battery-icon">
+              <i />
+            </span>
+          </div>
+        </div>
+
         <AnimatePresence mode="wait">
           {view === 'player' ? (
             <motion.div
@@ -404,6 +419,8 @@ function App() {
             </motion.div>
           ) : null}
         </AnimatePresence>
+
+        <div className="home-indicator" aria-hidden="true" />
       </section>
     </main>
   );
