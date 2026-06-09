@@ -137,11 +137,45 @@ p {
 }
 
 .wifi-icon {
-  width: 13px;
-  height: 9px;
-  border-top: 2px solid currentColor;
-  border-radius: 12px 12px 0 0;
-  opacity: 0.82;
+  position: relative;
+  width: 17px;
+  height: 13px;
+  overflow: hidden;
+  opacity: 0.9;
+}
+
+.wifi-icon,
+.wifi-icon::before,
+.wifi-icon::after {
+  border-color: currentColor;
+}
+
+.wifi-icon::before,
+.wifi-icon::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  border-style: solid;
+  border-width: 2px 2px 0 2px;
+  border-radius: 999px 999px 0 0;
+  transform: translateX(-50%);
+}
+
+.wifi-icon::before {
+  bottom: 1px;
+  width: 15px;
+  height: 11px;
+}
+
+.wifi-icon::after {
+  bottom: 1px;
+  width: 9px;
+  height: 7px;
+}
+
+.wifi-icon {
+  background:
+    radial-gradient(circle at 50% 100%, currentColor 0 1.7px, transparent 1.9px);
 }
 
 .battery-icon {
@@ -180,6 +214,7 @@ p {
   height: 5px;
   justify-self: center;
   border-radius: 999px;
+  margin-bottom: 4px;
   background: rgba(22, 27, 38, 0.2);
 }
 
@@ -687,6 +722,7 @@ p {
   grid-template-columns: 1fr auto 1fr;
   gap: 16px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .transport-controls button {
@@ -934,7 +970,8 @@ p {
   font-weight: 720;
   gap: 9px;
   line-height: 1;
-  margin-top: 22px;
+  margin-top: 18px;
+  margin-bottom: 12px;
   padding: 0 28px;
   text-align: center;
 }
@@ -1190,6 +1227,7 @@ p {
 
   .transport-controls {
     margin-top: 8px;
+    margin-bottom: 12px;
   }
 
   .library-hero h1 {
@@ -1209,7 +1247,8 @@ p {
   }
 
   .return-player {
-    margin-top: 16px;
+    margin-top: 12px;
+    margin-bottom: 14px;
     min-height: 60px;
   }
 
